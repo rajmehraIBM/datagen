@@ -1,0 +1,56 @@
+{
+    "dataFile" : 
+         {
+            "filename": "Address",
+            "delimiter": ";",
+            "count": 90000,
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "seq",
+                    "start": 5000
+                },
+                  {
+                    "name": "address_line",
+                    "type": "address"
+                } ,
+                {
+                    "name": "state",
+                    "type": "pickone",
+                    "pickValues": ["VIC", "NSW", "SA", "WA", "QLD"]
+                },
+                {
+                    "name": "suburb",
+                    "type": "pickone",
+                    "pickValues": ["Richmond", "Brunswick", "Carlton", "Glen Waverly", "Norh Shore"]
+                } ,
+                 {
+                    "name": "post_code",
+                    "type": "pickone",
+                    "pickValues": ["3006", "2108", "5107", "7028"]
+                },
+                {
+                    "name": "created_by",
+                    "type": "constant",
+                    "value": "system"
+                },  
+                {
+                    "name": "created_date",
+                    "type": "constant",
+                    "value": "2017-04-07 08:21:28"
+                },
+                {
+                    "name": "last_modified_by",
+                    "type": "constant",
+                    "value": "system"
+                },  
+                {
+                    "name": "last_modified_date",
+                    "type": "constant",
+                    "value": "2017-04-07 08:21:28"
+                }                                                
+            ]
+        }
+
+    
+}

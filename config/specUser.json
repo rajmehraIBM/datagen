@@ -1,0 +1,82 @@
+{
+    "dataFile" : 
+         {
+            "filename": "User",
+            "delimiter": ";",
+            "count": 100,
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "seq",
+                    "start": 5000
+                },
+                {
+                    "name": "login",
+                    "type": "prefixseq",
+                    "prefix": "genuser",
+                    "start": 1
+                },
+                {
+                    "name": "password_hash",
+                    "type": "constant",
+                    "value": "$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K"
+                }, 
+                {
+                    "name": "first_name",
+                    "type": "first"
+                } , 
+                {
+                    "name": "last_name",
+                    "type": "last"
+                } ,   
+                {
+                    "name": "email",
+                    "type": "email"
+                } ,   
+                {   "name": "activated",
+                    "type": "pickone",
+                    "pickValues": [1,0]
+                } ,
+                {   "name": "lang_key",
+                    "type": "pickone",
+                    "pickValues": ["en", "fr"]
+                } , 
+                {
+                    "name": "activation_key",
+                    "type": "constant",
+                    "value": "59943733674989942188"
+                }, 
+                {
+                    "name": "reset_key",
+                    "type": "constant",
+                    "value": "59943733674989942188"
+                }, 
+                {
+                    "name": "created_by",
+                    "type": "constant",
+                    "value": "system"
+                },  
+                {
+                    "name": "created_date",
+                    "type": "constant",
+                    "value": "2017-04-07 08:21:28"
+                },
+                {   "name": "reset_date",
+                    "type": "constant",
+                    "value": "2017-04-07 08:21:28"
+                },
+                {
+                    "name": "last_modified_by",
+                    "type": "constant",
+                    "value": "system"
+                },  
+                {
+                    "name": "last_modified_date",
+                    "type": "constant",
+                    "value": "2017-04-07 08:21:28"
+                }                                      
+            ]
+        }
+
+    
+}

@@ -1,0 +1,62 @@
+{
+    "dataFile" : 
+         {
+            "filename": "Partner",
+            "delimiter": ";",
+            "target": "sql",
+            "schema": "BLUADMIN",
+            "count": 50,
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "seq",
+                    "start": 5000
+                },
+                {
+                    "name": "name",
+                    "type": "pickone",
+                    "pickValues": ["Porter Davis", "Metricon", "Symmonds", "Meriton"]
+                },
+                  {
+                    "name": "contact_name",
+                    "type": "name"
+                } ,
+                {
+                    "name": "contact_email",
+                    "type": "email"
+                } ,
+                {
+                    "name": "contact_phone",
+                    "type": "phone"
+                } ,
+                {
+                    "name": "business_address_id",
+                    "type": "seq",
+                    "start": 5000,
+                    "end": 6000
+                },
+                {
+                    "name": "created_by",
+                    "type": "constant",
+                    "value": "system"
+                },  
+                {
+                    "name": "created_date",
+                    "type": "constant",
+                    "value": "2017-04-07 08:21:28"
+                },
+                {
+                    "name": "last_modified_by",
+                    "type": "constant",
+                    "value": "system"
+                },  
+                {
+                    "name": "last_modified_date",
+                    "type": "constant",
+                    "value": "2017-04-07 08:21:28"
+                }                                                
+            ]
+        }
+
+    
+}

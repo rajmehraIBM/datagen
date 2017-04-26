@@ -1,0 +1,10 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: rm1-datagen
+  host: rm1-datagen
+  disk_quota: 1024M
+  services:
+  - rm1-datagen-cloudantNoSQLDB

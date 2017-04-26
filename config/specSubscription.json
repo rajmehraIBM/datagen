@@ -1,0 +1,150 @@
+{
+    "dataFile" : 
+         {
+            "filename": "Subscription",
+            "delimiter": ";",
+            "count": 30000,
+            "target": "sql",
+            "schema": "BLUADMIN",  
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "seq",
+                    "start": 5000
+                },
+                {   "name": "expected_start",
+                    "type": "pickone",
+                    "pickValues": ["2017-05-21", "2017-04-10", "2017-05-09"]
+                } ,
+                {   "name": "actual_start",
+                    "type": "pickone",
+                    "pickValues": ["2017-05-21", "2017-04-10", "2017-05-09"]
+                } , 
+                {   "name": "end_date",
+                    "type": "pickone",
+                    "pickValues": ["2018-05-21", "2018-04-10", "2018-05-09"]
+                } ,  
+                {   "name": "cancel_date",
+                    "type": "pickone",
+                    "pickValues": ["2017-06-21", "NULL"]
+                } , 
+                {
+                    "name": "description",
+                    "type": "sentence"
+                } ,  
+                {   "name": "occupancy_type",
+                    "type": "pickone",
+                    "pickValues": ["SINGLE", "DOUBLE", ""]
+                } ,  
+                {   "name": "status",
+                    "type": "pickone",
+                    "pickValues": ["SUBMITTED", "FUTURE_SUBSCRIPTION"]
+                } , 
+                {   "name": "status_reason_code",
+                    "type": "pickone",
+                    "pickValues": [0, 1, 2]
+                } , 
+                {
+                    "name": "crn",
+                    "type": "natural",
+                    "min": 100,
+                    "max": 300
+                } ,  
+                {
+                    "name": "person_title",
+                    "type": "pickone",
+                    "pickValues": ["MR", "MRS", "DR", "MS"]
+                },  
+                {
+                    "name": "last_name",
+                    "type": "last"
+                } , 
+                {
+                    "name": "middle_name",
+                    "type": "pickone",
+                    "pickValues": ["", "P", "R", "M"]
+                },  
+                {
+                    "name": "first_name",
+                    "type": "first"
+                } ,  
+                {   "name": "person_dob",
+                    "type": "pickone",
+                    "pickValues": ["1996-01-11", "1978-04-10", "1967-05-09"]
+                } ,   
+                {
+                    "name": "contact_email",
+                    "type": "email"
+                } ,  
+                {
+                    "name": "mobile_phone",
+                    "type": "phone"
+                } ,  
+                {
+                    "name": "home_phone",
+                    "type": "phone"
+                } ,  
+                {   "name": "is_member",
+                    "type": "pickone",
+                    "pickValues": [0, 1]
+                } , 
+                {
+                    "name": "membership_number",
+                    "type": "natural",
+                    "min": 1000000000000,
+                    "max": 2000000000000
+                } ,
+                {
+                    "name": "notes",
+                    "type": "sentence"
+                } ,
+                {
+                    "name": "property_address_id",
+                    "type": "seq",
+                    "start": 5000,
+                    "end": 34999
+                },
+
+                {
+                    "name": "residential_address_id",
+                    "type": "seq",
+                    "start": 35000,
+                    "end": 64999
+                },
+                {
+                    "name": "mailing_address_id",
+                    "type": "seq",
+                    "start": 65000,
+                    "end": 94999
+                },
+                {
+                    "name": "billing_entity_id",
+                    "type": "seq",
+                    "start": 5000,
+                    "end": 5149
+                },
+                {
+                    "name": "created_by",
+                    "type": "constant",
+                    "value": "system"
+                },  
+                {
+                    "name": "created_date",
+                    "type": "constant",
+                    "value": "2017-04-07 08:21:28"
+                },
+                {
+                    "name": "last_modified_by",
+                    "type": "constant",
+                    "value": "system"
+                },  
+                {
+                    "name": "last_modified_date",
+                    "type": "constant",
+                    "value": "2017-04-07 08:21:28"
+                }                                                
+            ]
+        }
+
+    
+}

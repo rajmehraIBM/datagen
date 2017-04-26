@@ -1,0 +1,102 @@
+{
+    "dataFile" : 
+         {
+            "filename": "BILLING_ENTITY",
+            "delimiter": ";",
+            "count": 150,
+            "target": "sql",
+            "schema": "BLUADMIN",            
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "seq",
+                    "start": 5000
+                },
+               {
+                    "name": "name",
+                    "type": "name"
+                } ,
+                {
+                    "name": "billing_code",
+                    "type": "pickone",
+                    "pickValues": ["PDN", "PDS", "MTN", "MTS"]
+                },
+                {
+                    "name": "abn",
+                    "type": "natural",
+                    "min": 1000000000000,
+                    "max": 2000000000000
+                } ,
+                {
+                    "name": "campaign_code",
+                    "type": "pickone",
+                    "pickValues": ["PDN_North", "PDS_South", "MTN_North", "MTS_South"]
+                } ,
+                {
+                    "name": "property_manager",
+                    "type": "name"
+                } ,
+                {   "name": "contract_type",
+                    "type": "pickone",
+                    "pickValues": ["MONTHLY_ONGOING", "YEARLY_ONGOING", "INITIAL_SUBSCRIPTION"]
+                } ,
+                {
+                    "name": "subscription_cost",
+                    "type": "natural",
+                    "min": 100,
+                    "max": 250
+                } ,
+
+                {
+                    "name": "invoice_text",
+                    "type": "paragraph"
+                } ,
+                {   "name": "crn_choice",
+                    "type": "pickone",
+                    "pickValues": ["MANDATORY", "OPTIONAL"]
+                } ,
+                {   "name": "future_subs",
+                    "type": "pickone",
+                    "pickValues": [0, 1]
+                } ,
+                {   "name": "is_active",
+                    "type": "pickone",
+                    "pickValues": [0, 1]
+                } ,
+                {
+                    "name": "business_address_id",
+                    "type": "seq",
+                    "start": 5000,
+                    "end": 6000
+                },
+                {
+                    "name": "partner_id",
+                    "type": "seq",
+                    "start": 5000,
+                    "end": 5049
+                },
+                {
+                    "name": "created_by",
+                    "type": "constant",
+                    "value": "system"
+                },  
+                {
+                    "name": "created_date",
+                    "type": "constant",
+                    "value": "2017-04-07 08:21:28"
+                },
+                {
+                    "name": "last_modified_by",
+                    "type": "constant",
+                    "value": "system"
+                },  
+                {
+                    "name": "last_modified_date",
+                    "type": "constant",
+                    "value": "2017-04-07 08:21:28"
+                }                                                
+            ]
+        }
+
+    
+}

@@ -1,0 +1,32 @@
+{
+    "dataFile" : 
+         {
+            "filename": "Portal_User",
+            "delimiter": ";",
+            "count": 100,
+            "target": "sql",
+            "schema": "BLUADMIN",  
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "seq",
+                    "start": 5000
+                },
+                {
+                    "name": "user_id",
+                    "type": "seq",
+                    "start": 5000,
+                    "end": 5099
+                },
+                {
+                    "name": "partner_id",
+                    "type": "seq",
+                    "start": 5000,
+                    "end": 5049
+                }
+                                                  
+            ]
+        }
+
+    
+}

@@ -1,0 +1,30 @@
+{
+    "dataFile" : 
+         {
+            "filename": "PortalUser",
+            "delimiter": ";",
+            "count": 2,
+            "columns": [
+                {
+                    "name": "id",
+                    "type": "seq",
+                    "start": 5000
+                },
+                {
+                    "name": "user_id",
+                    "type": "seq",
+                    "start": 16,
+                    "end": 50
+                },
+                {
+                    "name": "partner_id",
+                    "type": "seq",
+                    "start": 15,
+                    "end": 50
+                }
+                                                  
+            ]
+        }
+
+    
+}
