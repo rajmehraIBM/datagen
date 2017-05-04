@@ -4,8 +4,6 @@
             "filename": "Subscription",
             "delimiter": ";",
             "count": 30000,
-            "target": "sql",
-            "schema": "BLUADMIN",  
             "columns": [
                 {
                     "name": "id",
@@ -34,11 +32,11 @@
                 } ,  
                 {   "name": "occupancy_type",
                     "type": "pickone",
-                    "pickValues": ["SINGLE", "DOUBLE", ""]
+                    "pickValues": ["NULL"]
                 } ,  
                 {   "name": "status",
                     "type": "pickone",
-                    "pickValues": ["SUBMITTED", "FUTURE_SUBSCRIPTION"]
+                    "pickValues": ["SUBMITTED", "FUTURE_SUBSCRIPTION", "ACTIVATED", "NOT_PROCEEDING", "CANCELLATION_REQUESTED", "CANCELLED"]
                 } , 
                 {   "name": "status_reason_code",
                     "type": "pickone",
@@ -52,8 +50,7 @@
                 } ,  
                 {
                     "name": "person_title",
-                    "type": "pickone",
-                    "pickValues": ["MR", "MRS", "DR", "MS"]
+                    "type": "prefix"
                 },  
                 {
                     "name": "last_name",
@@ -62,7 +59,7 @@
                 {
                     "name": "middle_name",
                     "type": "pickone",
-                    "pickValues": ["", "P", "R", "M"]
+                    "pickValues": ["NULL"]
                 },  
                 {
                     "name": "first_name",
@@ -98,24 +95,78 @@
                     "name": "notes",
                     "type": "sentence"
                 } ,
+                {   "name": "accept_offer",
+                    "type": "pickone",
+                    "pickValues": [0, 1]
+                } , 
                 {
-                    "name": "property_address_id",
-                    "type": "seq",
-                    "start": 5000,
-                    "end": 34999
+                    "name": "property_address_line1",
+                    "type": "address1"
+                } ,
+                {
+                    "name": "property_address_line2",
+                    "type": "address2"
+                } ,
+                {
+                    "name": "property_address_state",
+                    "type": "pickone",
+                    "pickValues": ["VIC", "NSW", "SA", "WA", "QLD"]
                 },
-
                 {
-                    "name": "residential_address_id",
-                    "type": "seq",
-                    "start": 35000,
-                    "end": 64999
+                    "name": "property_address_suburb",
+                    "type": "pickone",
+                    "pickValues": ["Richmond", "Brunswick", "Carlton", "Glen Waverly", "Norh Shore"]
+                },
+                 {
+                    "name": "property_address_postcode",
+                    "type": "pickone",
+                    "pickValues": ["3006", "2108", "5107", "7028"]
                 },
                 {
-                    "name": "mailing_address_id",
-                    "type": "seq",
-                    "start": 65000,
-                    "end": 94999
+                    "name": "residential_address_line1",
+                    "type": "address1"
+                } ,
+                {
+                    "name": "residential_address_line2",
+                    "type": "address2"
+                } ,
+                {
+                    "name": "residential_address_state",
+                    "type": "pickone",
+                    "pickValues": ["VIC", "NSW", "SA", "WA", "QLD"]
+                },
+                {
+                    "name": "residential_address_suburb",
+                    "type": "pickone",
+                    "pickValues": ["Richmond", "Brunswick", "Carlton", "Glen Waverly", "Norh Shore"]
+                },
+                 {
+                    "name": "residential_address_postcode",
+                    "type": "pickone",
+                    "pickValues": ["3006", "2108", "5107", "7028"]
+                },
+                {
+                    "name": "mailing_address_line1",
+                    "type": "address1"
+                } ,
+                {
+                    "name": "mailing_address_line2",
+                    "type": "address2"
+                } ,
+                {
+                    "name": "mailing_address_state",
+                    "type": "pickone",
+                    "pickValues": ["VIC", "NSW", "SA", "WA", "QLD"]
+                },
+                {
+                    "name": "mailing_address_suburb",
+                    "type": "pickone",
+                    "pickValues": ["Richmond", "Brunswick", "Carlton", "Glen Waverly", "Norh Shore"]
+                },
+                 {
+                    "name": "mailing_address_postcode",
+                    "type": "pickone",
+                    "pickValues": ["3006", "2108", "5107", "7028"]
                 },
                 {
                     "name": "billing_entity_id",
@@ -129,20 +180,10 @@
                     "value": "system"
                 },  
                 {
-                    "name": "created_date",
-                    "type": "constant",
-                    "value": "2017-04-07 08:21:28"
-                },
-                {
                     "name": "last_modified_by",
                     "type": "constant",
                     "value": "system"
-                },  
-                {
-                    "name": "last_modified_date",
-                    "type": "constant",
-                    "value": "2017-04-07 08:21:28"
-                }                                                
+                }                                             
             ]
         }
 

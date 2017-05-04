@@ -1,11 +1,9 @@
 {
     "dataFile" : 
          {
-            "filename": "Portal_User",
+            "filename": "PortalUser",
             "delimiter": ";",
             "count": 100,
-            "target": "sql",
-            "schema": "BLUADMIN",  
             "columns": [
                 {
                     "name": "id",

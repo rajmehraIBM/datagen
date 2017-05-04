@@ -3,8 +3,6 @@
          {
             "filename": "Partner",
             "delimiter": ";",
-            "target": "sql",
-            "schema": "BLUADMIN",
             "count": 50,
             "columns": [
                 {
@@ -15,7 +13,11 @@
                 {
                     "name": "name",
                     "type": "pickone",
-                    "pickValues": ["Porter Davis", "Metricon", "Symmonds", "Meriton"]
+                    "pickValues": ["Porter Davis", "Metricon", "Symmonds", "Meriton", "Blah", "Blah Blah", "Random", "Super Client", "Yet Another"]
+                },
+                {
+                    "name": "key",
+                    "type": "hash"
                 },
                   {
                     "name": "contact_name",
@@ -30,31 +32,38 @@
                     "type": "phone"
                 } ,
                 {
-                    "name": "business_address_id",
-                    "type": "seq",
-                    "start": 5000,
-                    "end": 6000
+                    "name": "address_line1",
+                    "type": "address1"
+                } ,
+                {
+                    "name": "address_line2",
+                    "type": "address2"
+                } ,
+                {
+                    "name": "state",
+                    "type": "pickone",
+                    "pickValues": ["VIC", "NSW", "SA", "WA", "QLD"]
+                },
+                {
+                    "name": "suburb",
+                    "type": "pickone",
+                    "pickValues": ["Richmond", "Brunswick", "Carlton", "Glen Waverly", "Norh Shore"]
+                },
+                 {
+                    "name": "postcode",
+                    "type": "pickone",
+                    "pickValues": ["3006", "2108", "5107", "7028"]
                 },
                 {
                     "name": "created_by",
                     "type": "constant",
                     "value": "system"
-                },  
-                {
-                    "name": "created_date",
-                    "type": "constant",
-                    "value": "2017-04-07 08:21:28"
                 },
                 {
                     "name": "last_modified_by",
                     "type": "constant",
                     "value": "system"
-                },  
-                {
-                    "name": "last_modified_date",
-                    "type": "constant",
-                    "value": "2017-04-07 08:21:28"
-                }                                                
+                }                                           
             ]
         }
 

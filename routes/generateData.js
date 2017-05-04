@@ -113,14 +113,22 @@ function generateColumn(columnSpec, index){
                 }
             }
             break;         
-        case 'address' : 
-            colValue = chance.address();
+        case 'address1' : 
+            var address = chance.address();
+            colValue = chance.address().substring(0, address.indexOf(' '));
+            break;   
+        case 'address2' :
+            var address = chance.address();
+            colValue = chance.address().substring(address.indexOf(' ') + 1);
             break;   
         case 'pickone' : 
             colValue = chance.pickone(columnSpec.pickValues);
             break;
         case 'name' : 
             colValue = chance.name();
+            break;
+        case 'hash' :
+            colValue = chance.hash({length: 20});
             break;
         case 'email' : 
             colValue = chance.email();
@@ -148,6 +156,9 @@ function generateColumn(columnSpec, index){
             break;
         case 'sentence' : 
             colValue = chance.sentence();
+            break;
+        case 'prefix': 
+            colValue = chance.prefix();
             break;
         case 'last' : 
             colValue = chance.last();

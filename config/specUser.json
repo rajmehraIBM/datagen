@@ -51,30 +51,20 @@
                     "type": "constant",
                     "value": "59943733674989942188"
                 }, 
+                {   "name": "account_policy_id",
+                    "type": "pickone",
+                    "pickValues": [1,2]
+                },
                 {
                     "name": "created_by",
                     "type": "constant",
                     "value": "system"
-                },  
-                {
-                    "name": "created_date",
-                    "type": "constant",
-                    "value": "2017-04-07 08:21:28"
-                },
-                {   "name": "reset_date",
-                    "type": "constant",
-                    "value": "2017-04-07 08:21:28"
                 },
                 {
                     "name": "last_modified_by",
                     "type": "constant",
                     "value": "system"
-                },  
-                {
-                    "name": "last_modified_date",
-                    "type": "constant",
-                    "value": "2017-04-07 08:21:28"
-                }                                      
+                }                                    
             ]
         }
 
